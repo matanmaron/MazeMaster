@@ -34,12 +34,14 @@ public class PlayerControll : MonoBehaviour
     private float Run = 1;
     private bool pickuping = false;
     private bool walking = false;
+    private CharacterController _controller;
     // Start is called before the first frame update
     void Start()
     {
         GamePaused = false;
         BloodScreen.SetActive(false);
         anim = GetComponent<Animator>();
+        _controller = GetComponent<CharacterController>();
         Invulnerable = false;
         Score = 0;
         End.SetActive(false);
@@ -97,6 +99,16 @@ public class PlayerControll : MonoBehaviour
     {
         if (!GamePaused)
         {
+            Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            _controller.Move(move * Time.deltaTime * Speed);
+
+            rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+            transform.localEulerAngles = new Vector3(0, rotationX, 0);
+
+            if (move != Vector3.zero || rotationX != 0)
+            {
+                WalkAnim();
+            }
             //if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
             //{
             //    Run = 1.5f;
@@ -105,11 +117,12 @@ public class PlayerControll : MonoBehaviour
             //{
             //    Run = 1f;
             //}
-            var inputX = Input.GetAxis("Horizontal");
-            var inputY = Input.GetAxis("Vertical");
-            WalkAnim();
-            transform.position += transform.right * Speed * inputX * Time.deltaTime * Run;
-            transform.position += transform.forward * Speed * inputY * Time.deltaTime * Run;
+            //var inputX = Input.GetAxisRaw("Horizontal");
+            //var inputY = Input.GetAxisRaw("Vertical");
+            //WalkAnim();
+            //rb.AddForce(new Vector3(inputX, inputY, 0) * Speed);
+            ////transform.position += transform.right * Speed * inputX * Time.deltaTime * Run;
+            ////transform.position += transform.forward * Speed * inputY * Time.deltaTime * Run;
             rotationX += Input.GetAxis("Mouse X") * sensitivityX;
             transform.localEulerAngles = new Vector3(0, rotationX, 0);
         }
