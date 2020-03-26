@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -127,11 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -141,6 +136,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (7)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -256,8 +256,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -408,10 +406,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+    - target: {fileID: -410780265891177489, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (11)
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -410780265891177489, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -410780265891177489, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -422,6 +430,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (11)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -493,21 +506,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: -410780265891177489, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -410780265891177489, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -410780265891177489, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8aa335f36d34a76a64d67aa3910828, type: 3}
 --- !u!1001 &66923810
@@ -517,11 +515,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint(21)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -531,6 +524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint(21)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -596,6 +594,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (11)
@@ -644,14 +650,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
 --- !u!1001 &98453170
@@ -661,11 +659,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -675,6 +668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (9)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -880,6 +878,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (1)
@@ -928,14 +934,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
 --- !u!4 &233081495 stripped
@@ -951,6 +949,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie
@@ -998,14 +1004,6 @@ PrefabInstance:
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
@@ -1269,7 +1267,6 @@ GameObject:
   - component: {fileID: 337701531}
   - component: {fileID: 337701530}
   - component: {fileID: 337701529}
-  - component: {fileID: 337701532}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -1321,7 +1318,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f1bbdeabaf984844a3b2732b03d7d54, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1350,19 +1347,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337701527}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &337701532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337701527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e033fefa05a4444b98e85660e9959772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayTime: -1
 --- !u!1001 &349396833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1370,6 +1354,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (9)
@@ -1418,14 +1410,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
 --- !u!1001 &352731535
@@ -1435,6 +1419,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (7)
@@ -1483,14 +1475,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
 --- !u!4 &362197404 stripped
@@ -1506,6 +1490,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (2)
@@ -1554,35 +1546,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
---- !u!1 &390792631 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1968476592218994, guid: 313ad0ef31f75b84f9f31c0528802fdd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1330486885}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &390792633
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390792631}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.52, y: 1, z: 0.46}
-  m_Center: {x: 0, y: 0.54, z: 0}
 --- !u!1001 &390833643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1590,11 +1555,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (19)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -1604,6 +1564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (19)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -1695,7 +1660,6 @@ GameObject:
   - component: {fileID: 396236912}
   - component: {fileID: 396236911}
   - component: {fileID: 396236910}
-  - component: {fileID: 396236913}
   m_Layer: 0
   m_Name: Wall (2)
   m_TagString: Untagged
@@ -1747,7 +1711,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f1bbdeabaf984844a3b2732b03d7d54, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1776,19 +1740,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396236908}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &396236913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 396236908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e033fefa05a4444b98e85660e9959772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayTime: -1
 --- !u!1001 &401067090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1796,11 +1747,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (17)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -1810,6 +1756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (17)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -1895,7 +1846,6 @@ GameObject:
   - component: {fileID: 412286140}
   - component: {fileID: 412286139}
   - component: {fileID: 412286138}
-  - component: {fileID: 412286141}
   m_Layer: 0
   m_Name: Wall (7)
   m_TagString: Untagged
@@ -1947,7 +1897,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f1bbdeabaf984844a3b2732b03d7d54, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1976,19 +1926,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412286136}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &412286141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412286136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e033fefa05a4444b98e85660e9959772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayTime: -1
 --- !u!1001 &429377379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1996,6 +1933,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (6)
@@ -2044,14 +1989,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
 --- !u!1001 &470258669
@@ -2061,11 +1998,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -2075,6 +2007,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (10)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -2203,8 +2140,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -2290,8 +2225,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
     m_FontSize: 40
@@ -2360,11 +2293,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -2374,6 +2302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -2454,11 +2387,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (20)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -2468,6 +2396,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (20)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -2548,6 +2481,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (4)
@@ -2595,14 +2536,6 @@ PrefabInstance:
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
@@ -2661,8 +2594,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 419be2c68e8034da69d1ff4dd325aa05, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -2688,6 +2619,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (5)
@@ -2735,14 +2674,6 @@ PrefabInstance:
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
@@ -2851,6 +2782,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (10)
@@ -2898,14 +2837,6 @@ PrefabInstance:
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
@@ -3066,8 +2997,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
     m_FontSize: 40
@@ -3161,8 +3090,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
     m_FontSize: 40
@@ -3331,8 +3258,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 2315903e11a7041d0aa36dea32f76714, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -3363,7 +3288,6 @@ GameObject:
   - component: {fileID: 760327707}
   - component: {fileID: 760327706}
   - component: {fileID: 760327705}
-  - component: {fileID: 760327708}
   m_Layer: 0
   m_Name: Wall (3)
   m_TagString: Untagged
@@ -3415,7 +3339,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f1bbdeabaf984844a3b2732b03d7d54, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3444,19 +3368,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760327703}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &760327708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760327703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e033fefa05a4444b98e85660e9959772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayTime: -1
 --- !u!4 &826026156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
@@ -3559,8 +3470,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
     m_FontSize: 40
@@ -3590,11 +3499,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (16)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -3604,6 +3508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (16)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -3713,8 +3622,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -3765,7 +3672,6 @@ GameObject:
   - component: {fileID: 858976307}
   - component: {fileID: 858976306}
   - component: {fileID: 858976305}
-  - component: {fileID: 858976308}
   m_Layer: 0
   m_Name: Wall (1)
   m_TagString: Untagged
@@ -3817,7 +3723,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f1bbdeabaf984844a3b2732b03d7d54, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3846,19 +3752,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858976303}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &858976308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858976303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e033fefa05a4444b98e85660e9959772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayTime: -1
 --- !u!4 &866959000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba,
@@ -4018,8 +3911,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 51
@@ -4049,11 +3940,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -4063,6 +3949,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -4191,8 +4082,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 34809a21d87bd4ac2948b12763e1faa1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -4223,7 +4112,6 @@ GameObject:
   - component: {fileID: 989118288}
   - component: {fileID: 989118287}
   - component: {fileID: 989118286}
-  - component: {fileID: 989118289}
   m_Layer: 0
   m_Name: Wall (8)
   m_TagString: Untagged
@@ -4275,7 +4163,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f1bbdeabaf984844a3b2732b03d7d54, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4304,19 +4192,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989118284}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &989118289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989118284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e033fefa05a4444b98e85660e9959772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayTime: -1
 --- !u!1001 &992225409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4324,11 +4199,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (14)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -4338,6 +4208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (14)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -4534,11 +4409,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (15)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -4548,6 +4418,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (15)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -4613,11 +4488,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -4627,6 +4497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -4724,7 +4599,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1330486885}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390792631}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1d0ab6c7b5d44922849dd9b7dc1182a, type: 3}
@@ -4928,6 +4803,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (12)
@@ -4976,14 +4859,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
 --- !u!1001 &1166533523
@@ -4993,11 +4868,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -5007,6 +4877,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -5092,7 +4967,6 @@ GameObject:
   - component: {fileID: 1172705252}
   - component: {fileID: 1172705251}
   - component: {fileID: 1172705250}
-  - component: {fileID: 1172705253}
   m_Layer: 0
   m_Name: Wall (9)
   m_TagString: Untagged
@@ -5144,7 +5018,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f1bbdeabaf984844a3b2732b03d7d54, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5173,19 +5047,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172705248}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1172705253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172705248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e033fefa05a4444b98e85660e9959772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayTime: -1
 --- !u!4 &1218681557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba,
@@ -5285,8 +5146,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1246154972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5305,8 +5164,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -5337,7 +5194,6 @@ GameObject:
   - component: {fileID: 1287662293}
   - component: {fileID: 1287662292}
   - component: {fileID: 1287662291}
-  - component: {fileID: 1287662294}
   m_Layer: 0
   m_Name: Wall (5)
   m_TagString: Untagged
@@ -5389,7 +5245,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f1bbdeabaf984844a3b2732b03d7d54, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5418,19 +5274,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287662289}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1287662294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287662289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e033fefa05a4444b98e85660e9959772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayTime: -1
 --- !u!4 &1289632440 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
@@ -5473,8 +5316,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -5527,10 +5368,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+    - target: {fileID: -410780265891177489, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (12)
+      propertyPath: m_Constraints
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -5541,6 +5382,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (12)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -5612,11 +5458,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: -410780265891177489, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 94
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8aa335f36d34a76a64d67aa3910828, type: 3}
 --- !u!1001 &1330486885
@@ -5626,10 +5467,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1968476592218994, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 1128589353, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
       propertyPath: TxtKeys
       value: 
@@ -5658,17 +5495,29 @@ PrefabInstance:
       propertyPath: BloodScreen
       value: 
       objectReference: {fileID: 54730431}
+    - target: {fileID: 1128589353, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
+      propertyPath: CameraHolder
+      value: 
+      objectReference: {fileID: 1890996515}
+    - target: {fileID: 1128589353, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
+      propertyPath: _Camera
+      value: 
+      objectReference: {fileID: 1650601883}
+    - target: {fileID: 1968476592218994, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4889916270699016, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 64.33
+      value: 65.5
       objectReference: {fileID: 0}
     - target: {fileID: 4889916270699016, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.38
+      value: -0.89
       objectReference: {fileID: 0}
     - target: {fileID: 4889916270699016, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -45.79
+      value: -46.8
       objectReference: {fileID: 0}
     - target: {fileID: 4889916270699016, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5701,14 +5550,6 @@ PrefabInstance:
     - target: {fileID: 4889916270699016, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 390792636, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
-      propertyPath: m_Center.y
-      value: 0.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 390792636, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
-      propertyPath: m_Height
-      value: 1.36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
@@ -5805,8 +5646,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1334392327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5825,8 +5664,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -5906,8 +5743,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -6026,11 +5861,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (13)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -6040,6 +5870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (13)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -6120,6 +5955,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (8)
@@ -6168,14 +6011,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
 --- !u!4 &1486390063 stripped
@@ -6220,7 +6055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25.32, y: -33.25}
+  m_AnchoredPosition: {x: -25.319946, y: -33.25}
   m_SizeDelta: {x: 50.65, y: 65.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1490389484
@@ -6256,8 +6091,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
     m_FontSize: 40
@@ -6534,8 +6367,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -6800,8 +6631,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
     m_FontSize: 150
@@ -6877,11 +6706,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (18)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -6891,6 +6715,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (18)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -7309,6 +7138,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (13)
@@ -7356,14 +7193,6 @@ PrefabInstance:
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
@@ -7666,8 +7495,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -7758,6 +7585,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393666985}
     m_Modifications:
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: rotSpeed
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (3)
@@ -7805,14 +7640,6 @@ PrefabInstance:
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: Speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398741001, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
-      propertyPath: rotSpeed
-      value: 140
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
@@ -7874,8 +7701,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -7909,8 +7734,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1890996517}
-  - component: {fileID: 1890996516}
-  - component: {fileID: 1890996518}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -7918,26 +7741,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1890996516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890996515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c69d66d0bd94145758301a205bdaf548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 3
-  Target: {fileID: 1128589353}
-  sensitivityX: 1
-  sensitivityY: 1
-  minimumX: -90
-  maximumX: 90
-  minimumY: -20
-  maximumY: 40
 --- !u!4 &1890996517
 Transform:
   m_ObjectHideFlags: 0
@@ -7953,23 +7756,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1890996518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890996515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b397164a1ba0a49d5b20f2a9b68b0bc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RayAmount: 1500
-  RayDistance: 300
-  StayTime: 2
-  cam: {fileID: 1650601886}
-  RPoints: []
 --- !u!1001 &1926777791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7977,11 +7763,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -7991,6 +7772,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (6)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -8076,7 +7862,6 @@ GameObject:
   - component: {fileID: 1930652189}
   - component: {fileID: 1930652188}
   - component: {fileID: 1930652187}
-  - component: {fileID: 1930652190}
   m_Layer: 0
   m_Name: Wall (6)
   m_TagString: Untagged
@@ -8128,7 +7913,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f1bbdeabaf984844a3b2732b03d7d54, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8157,19 +7942,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930652185}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1930652190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930652185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e033fefa05a4444b98e85660e9959772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayTime: -1
 --- !u!1 &1943210520
 GameObject:
   m_ObjectHideFlags: 0
@@ -8182,7 +7954,6 @@ GameObject:
   - component: {fileID: 1943210524}
   - component: {fileID: 1943210523}
   - component: {fileID: 1943210522}
-  - component: {fileID: 1943210525}
   m_Layer: 0
   m_Name: Wall (4)
   m_TagString: Untagged
@@ -8234,7 +8005,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f1bbdeabaf984844a3b2732b03d7d54, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8263,19 +8034,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943210520}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1943210525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943210520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e033fefa05a4444b98e85660e9959772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayTime: -1
 --- !u!1 &1945540437
 GameObject:
   m_ObjectHideFlags: 0
@@ -8487,11 +8245,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -8501,6 +8254,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint (8)
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -8667,8 +8425,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1986029665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8687,8 +8443,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -8719,7 +8473,6 @@ GameObject:
   - component: {fileID: 1997780079}
   - component: {fileID: 1997780078}
   - component: {fileID: 1997780077}
-  - component: {fileID: 1997780081}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -8757,7 +8510,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e7ed6772552b9e4488b1398f8282ed3b, type: 2}
+  - {fileID: 2100000, guid: dedc1d9470dafe046866e641dc6d6b34, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8800,19 +8553,6 @@ Transform:
   m_Father: {fileID: 1454788644}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1997780081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997780076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e033fefa05a4444b98e85660e9959772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayTime: -1
 --- !u!4 &2006283620 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba,
@@ -8932,11 +8672,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1638980915}
     m_Modifications:
-    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
-        type: 3}
-      propertyPath: m_Name
-      value: ScorePoint
-      objectReference: {fileID: 0}
     - target: {fileID: 714291524074078075, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: Speed
@@ -8946,6 +8681,11 @@ PrefabInstance:
         type: 3}
       propertyPath: UpSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_Name
+      value: ScorePoint
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}

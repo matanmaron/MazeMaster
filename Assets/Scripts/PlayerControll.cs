@@ -7,10 +7,8 @@ using UnityEngine.UI;
 
 public class PlayerControll : MonoBehaviour
 {
-    public float Speed;
     public int Health;
     public int Score;
-    public float Sensitivity;
     public bool YellowKey;
     public bool RedKey;
     public bool GreenKey;
@@ -22,26 +20,29 @@ public class PlayerControll : MonoBehaviour
     public GameObject Win;
     public GameObject Ps;
     public GameObject BloodScreen;
-    public float sensitivityX;
-    public float minimumX;
-    public float maximumX;
     public Animator anim;
-    private float rotationX;
     private bool Invulnerable;
-    public Material PlayerMat;
     private float waitTime = 1f;
     public bool GamePaused;
     private float Run = 1;
     private bool pickuping = false;
     private bool walking = false;
-    private CharacterController _controller;
+    
+    [SerializeField] float Speed = 15;
+    [SerializeField] float sensitivity = 10;
+    [SerializeField] bool invert = false;
+    [SerializeField] GameObject CameraHolder;
+    float player_rotationX;
+    float camera_minimumY = -20;
+    float camera_maximumY = 40;
+    float camera_rotationY;
+    float camera_rotationX;
     // Start is called before the first frame update
     void Start()
     {
         GamePaused = false;
         BloodScreen.SetActive(false);
         anim = GetComponent<Animator>();
-        _controller = GetComponent<CharacterController>();
         Invulnerable = false;
         Score = 0;
         End.SetActive(false);
@@ -53,6 +54,8 @@ public class PlayerControll : MonoBehaviour
         TxtKeys.text = SetKeys();
         SetHealth();
         SetScore();
+        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void SetScore()
@@ -99,35 +102,38 @@ public class PlayerControll : MonoBehaviour
     {
         if (!GamePaused)
         {
-            Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            _controller.Move(move * Time.deltaTime * Speed);
-
-            rotationX += Input.GetAxis("Mouse X") * sensitivityX;
-            transform.localEulerAngles = new Vector3(0, rotationX, 0);
-
-            if (move != Vector3.zero || rotationX != 0)
-            {
-                WalkAnim();
-            }
-            //if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
-            //{
-            //    Run = 1.5f;
-            //}
-            //else if(Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
-            //{
-            //    Run = 1f;
-            //}
-            //var inputX = Input.GetAxisRaw("Horizontal");
-            //var inputY = Input.GetAxisRaw("Vertical");
-            //WalkAnim();
-            //rb.AddForce(new Vector3(inputX, inputY, 0) * Speed);
-            ////transform.position += transform.right * Speed * inputX * Time.deltaTime * Run;
-            ////transform.position += transform.forward * Speed * inputY * Time.deltaTime * Run;
-            rotationX += Input.GetAxis("Mouse X") * sensitivityX;
-            transform.localEulerAngles = new Vector3(0, rotationX, 0);
+            MovePlayer();
+            MoveCamera();
         }
     }
 
+    void MovePlayer()
+    {
+        var inputX = Input.GetAxis("Horizontal");
+        var inputY = Input.GetAxis("Vertical");
+        WalkAnim();
+        transform.position += transform.right * Speed * inputX * Time.deltaTime * Run;
+        transform.position += transform.forward * Speed * inputY * Time.deltaTime * Run;
+        player_rotationX += Input.GetAxis("Mouse X") * sensitivity;
+        transform.localEulerAngles = new Vector3(0, player_rotationX, 0);
+    }
+
+    void MoveCamera()
+    {
+        if (invert)
+        {
+            camera_rotationY -= Input.GetAxis("Mouse Y") * sensitivity;
+        }
+        else
+        {
+            camera_rotationY += Input.GetAxis("Mouse Y") * sensitivity;    
+        }
+        camera_rotationX += Input.GetAxis("Mouse X") * sensitivity;
+        camera_rotationY = Mathf.Clamp(camera_rotationY, camera_minimumY, camera_maximumY);
+        CameraHolder.transform.localEulerAngles = new Vector3(-camera_rotationY, camera_rotationX, 0);
+        CameraHolder.transform.position = transform.position;
+    }
+    
     private void WalkAnim()
     {
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)
