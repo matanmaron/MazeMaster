@@ -7,14 +7,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
-
+    internal static GameManager Instance { get; private set; }
+    
     [SerializeField] UIManager uiManager = null;
-
+    [SerializeField] GameObject Top = null;
+    [SerializeField] internal GameObject AudioObject = null;
     internal bool GamePaused = false;
+    internal bool Cheater = false;
 
     bool Invulnerable = false;
     float waitTime = 1f;
+    int cheat = 0;
 
     private void Awake()
     {
@@ -30,6 +33,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        uiManager.SetHealth(Data.Health);
+        Top.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         GamePaused = false;
     }
@@ -39,6 +44,40 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             OnGamePaused();
+        }
+        IDKFA();
+    }
+
+    private void IDKFA()
+    {
+        if (Input.GetKeyDown(KeyCode.I) && cheat == 0)
+        {
+            cheat++;
+        }
+        else if(Input.GetKeyDown(KeyCode.D) && cheat == 1)
+        {
+            cheat++;
+        }
+        else if (Input.GetKeyDown(KeyCode.K) && cheat == 2)
+        {
+            cheat++;
+        }
+        else if (Input.GetKeyDown(KeyCode.F) && cheat == 3)
+        {
+            cheat++;
+        }
+        else if (Input.GetKeyDown(KeyCode.A) && cheat == 4)
+        {
+            Debug.Log("IDKFA");
+            Data.Keys = new List<KeysEnum>(){ KeysEnum.Blue, KeysEnum.Green, KeysEnum.Red, KeysEnum.Yellow};
+            Cheater = true;
+            uiManager.SetKeys(Data.Keys);
+            uiManager.SetScore(0);
+            cheat = 0;
+        }
+        else if (Input.anyKeyDown)
+        {
+            cheat = 0;
         }
     }
 
@@ -84,7 +123,7 @@ public class GameManager : MonoBehaviour
             if (Data.Keys.Contains(KeysEnum.Yellow))
             {
                 Data.Keys.Remove(KeysEnum.Yellow);
-                Destroy(collision.gameObject);
+                Destroy(collision.gameObject, 0.01f);
             }
         }
         else if (objName.Contains("Red"))
@@ -92,7 +131,7 @@ public class GameManager : MonoBehaviour
             if (Data.Keys.Contains(KeysEnum.Red))
             {
                 Data.Keys.Remove(KeysEnum.Red);
-                Destroy(collision.gameObject);
+                Destroy(collision.gameObject, 0.01f);
             }
         }
         else if (objName.Contains("Green"))
@@ -100,7 +139,7 @@ public class GameManager : MonoBehaviour
             if (Data.Keys.Contains(KeysEnum.Green))
             {
                 Data.Keys.Remove(KeysEnum.Green);
-                Destroy(collision.gameObject);
+                Destroy(collision.gameObject, 0.01f);
             }
         }
         else if (objName.Contains("Blue"))
@@ -108,7 +147,7 @@ public class GameManager : MonoBehaviour
             if (Data.Keys.Contains(KeysEnum.Blue))
             {
                 Data.Keys.Remove(KeysEnum.Blue);
-                Destroy(collision.gameObject);
+                Destroy(collision.gameObject, 0.01f);
             }
         }
         uiManager.SetKeys(Data.Keys);
@@ -123,7 +162,7 @@ public class GameManager : MonoBehaviour
             {
                 Data.Keys.Add(KeysEnum.Yellow);
             }
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject,0.01f);
         }
         else if (objName.Contains("Red"))
         {
@@ -131,7 +170,7 @@ public class GameManager : MonoBehaviour
             {
                 Data.Keys.Add(KeysEnum.Red);
             }
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject, 0.01f);
         }
         else if (objName.Contains("Green"))
         {
@@ -139,7 +178,7 @@ public class GameManager : MonoBehaviour
             {
                 Data.Keys.Add(KeysEnum.Green);
             }
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject, 0.01f);
         }
         else if (objName.Contains("Blue"))
         {
@@ -147,7 +186,7 @@ public class GameManager : MonoBehaviour
             {
                 Data.Keys.Add(KeysEnum.Blue);
             }
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject, 0.01f);
         }
         uiManager.SetKeys(Data.Keys);
     }
@@ -159,16 +198,16 @@ public class GameManager : MonoBehaviour
 
     internal void HitFinish(Collision collision)
     {
-        Destroy(collision.gameObject);
         uiManager.WinGame();
         Cursor.lockState = CursorLockMode.None;
+        Destroy(collision.gameObject, 0.01f);
     }
 
     internal void HitScore(Collision collision)
     {
         Data.Score++;
         uiManager.SetScore(Data.Score);
-        Destroy(collision.gameObject);
+        Destroy(collision.gameObject, 0.01f);
     }
 
     internal void HitEnemy()

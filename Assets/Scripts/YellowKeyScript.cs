@@ -7,7 +7,7 @@ public class YellowKeyScript : MonoBehaviour
     Color colorStart = Color.white;
     Color colorEnd = Color.yellow;
     float duration = 1.0f;
-    Renderer rend;
+    Renderer rend = null;
 
     void Start()
     {

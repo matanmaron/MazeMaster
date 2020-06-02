@@ -72,7 +72,6 @@ public class PlayerControll : MonoBehaviour
         else if (objName.Contains("Door"))
         {
             GameManager.Instance.HitDoors(collision);
-            Destroy(collision.gameObject);
         }
         else if (objName.Contains("Saw"))
         {

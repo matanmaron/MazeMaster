@@ -5,6 +5,7 @@ using Random = UnityEngine.Random;
 
 public class EnemyScript : MonoBehaviour
 {
+    [SerializeField] AudioSource Bite = null;
     float Speed = 3;
     float rotSpeed = 100f;
     bool isWandering = false;
@@ -45,7 +46,9 @@ public class EnemyScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(rot);
         if (collision.gameObject.tag == "Player")
         {
+            Bite.Play();
             animator.Play("attack");
+            transform.LookAt(collision.transform);
         }
     }
 

@@ -31,6 +31,10 @@ public class UIManager : MonoBehaviour
     internal void SetScore(int score)
     {
         TxtScore.text = $"SCORE: {score}";
+        if (GameManager.Instance.Cheater)
+        {
+            TxtScore.text = $"CHEATER !!";
+        }
     }
 
     internal void GamePause()
