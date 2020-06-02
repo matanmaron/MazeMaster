@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTypeDate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TypeDate>
+    <guid>842f43ac94b4b4f72ac0898650ddcc44</guid>
+    <fileName>Assets/Cleaner/Editor/AssetCollector.cs</fileName>
+    <timeStamp>2015-12-09T20:51:26+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>805140a4856714e288ea84985d3023df</guid>
+    <fileName>Assets/Cleaner/Editor/AssetReferenceCollection.cs</fileName>
+    <timeStamp>2015-12-09T20:51:26+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>202c278a17939b24c8b79c0ee1f94d8f</guid>
+    <fileName>Assets/Cleaner/Editor/ClassReferenceCollection.cs</fileName>
+    <timeStamp>2015-12-09T20:51:26+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>0d05386265df34bac8d0b6df44aa494c</guid>
+    <fileName>Assets/Cleaner/Editor/CollectionData.cs</fileName>
+    <timeStamp>2015-12-09T20:51:26+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>74eec3bfba0594259ac2843353c082a3</guid>
+    <fileName>Assets/Cleaner/Editor/FindUnusedAssetsWindow.cs</fileName>
+    <timeStamp>2015-12-09T20:51:26+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>2c4f01a79a77a45a9a84004cc2b78098</guid>
+    <fileName>Assets/Cleaner/Editor/ShaderReferenceCollection.cs</fileName>
+    <timeStamp>2015-12-09T20:51:26+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>32722e760aa8d4a6294d9f3cd7a8212b</guid>
+    <fileName>Assets/Scripts/BlueKeyScript.cs</fileName>
+    <timeStamp>2020-06-02T14:18:43.9787583+03:00</timeStamp>
+    <typeFullName>
+      <string>BlueKeyScript</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>23ace189e0c5cc041ba0fe46f34ecede</guid>
+    <fileName>Assets/Scripts/Data.cs</fileName>
+    <timeStamp>2020-06-02T18:48:12.8181609+03:00</timeStamp>
+    <typeFullName>
+      <string>Data</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>03a38b0430ec94d47bad5e2527ad873b</guid>
+    <fileName>Assets/Scripts/EnemyScript.cs</fileName>
+    <timeStamp>2020-06-02T14:18:43.9807537+03:00</timeStamp>
+    <typeFullName>
+      <string>EnemyScript</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>2a6360db2c20d03488cf7fe2c79e1bd8</guid>
+    <fileName>Assets/Scripts/Enums.cs</fileName>
+    <timeStamp>2020-06-02T15:02:13.896513+03:00</timeStamp>
+    <typeFullName>
+      <string>KeysEnum</string>
+      <string>DoorsEnum</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>dfcc054ace6cb47d4a700ae252d61328</guid>
+    <fileName>Assets/Scripts/FinishScript.cs</fileName>
+    <timeStamp>2020-06-02T14:18:43.9817533+03:00</timeStamp>
+    <typeFullName>
+      <string>FinishScript</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>1cf506167bf0048fdb99634a6772f2fe</guid>
+    <fileName>Assets/Scripts/GameManager.cs</fileName>
+    <timeStamp>2020-06-02T19:02:48.4125673+03:00</timeStamp>
+    <typeFullName>
+      <string>GameManager</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>bbdd1b3d853704de09e7746186991719</guid>
+    <fileName>Assets/Scripts/GreenKeyScript.cs</fileName>
+    <timeStamp>2020-06-02T14:18:43.9827531+03:00</timeStamp>
+    <typeFullName>
+      <string>GreenKeyScript</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>e9aa0f67ab46a204fb54a463e0e12220</guid>
+    <fileName>Assets/Scripts/MenuManager.cs</fileName>
+    <timeStamp>2020-06-02T16:02:59.8963222+03:00</timeStamp>
+    <typeFullName>
+      <string>MenuManager</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c1d0ab6c7b5d44922849dd9b7dc1182a</guid>
+    <fileName>Assets/Scripts/PlayerControll.cs</fileName>
+    <timeStamp>2020-06-02T18:46:32.5860361+03:00</timeStamp>
+    <typeFullName>
+      <string>PlayerControll</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f3b17e1332abf4ee3bdf95e9cdb0b04f</guid>
+    <fileName>Assets/Scripts/RedKeyScript.cs</fileName>
+    <timeStamp>2020-06-02T14:18:43.9837523+03:00</timeStamp>
+    <typeFullName>
+      <string>RedKeyScript</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>cd09b327368674fd9a05c1b733502fb4</guid>
+    <fileName>Assets/Scripts/SawScript.cs</fileName>
+    <timeStamp>2020-06-02T14:18:43.9847528+03:00</timeStamp>
+    <typeFullName>
+      <string>SawScript</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>24e50b523fb3a49b182b21e65964b32a</guid>
+    <fileName>Assets/Scripts/ScorePointScript.cs</fileName>
+    <timeStamp>2020-06-02T14:18:43.9847528+03:00</timeStamp>
+    <typeFullName>
+      <string>ScorePointScript</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>2a6e500401ed26e48ba2032fe6253f49</guid>
+    <fileName>Assets/Scripts/Settings.cs</fileName>
+    <timeStamp>2020-06-02T16:01:39.4765311+03:00</timeStamp>
+    <typeFullName>
+      <string>Settings</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>118e729a89c7c63469b0469d10ddde27</guid>
+    <fileName>Assets/Scripts/UIManager.cs</fileName>
+    <timeStamp>2020-06-02T18:51:09.7773973+03:00</timeStamp>
+    <typeFullName>
+      <string>UIManager</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ae9252665477d40b794b037432240ebb</guid>
+    <fileName>Assets/Scripts/YellowKeyScript.cs</fileName>
+    <timeStamp>2020-06-02T14:18:43.9857521+03:00</timeStamp>
+    <typeFullName>
+      <string>YellowKeyScript</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+</ArrayOfTypeDate>

@@ -5,24 +5,22 @@ using Random = UnityEngine.Random;
 
 public class EnemyScript : MonoBehaviour
 {
-    public float Speed = 3;
-    public float rotSpeed = 100f;
-    public bool isWandering;
-    public bool isRotLeft;
-    public bool isRotRight;
-    public bool isWalking;
+    float Speed = 3;
+    float rotSpeed = 100f;
+    bool isWandering = false;
+    bool isRotLeft = false;
+    bool isRotRight = false;
+    bool isWalking = false;
+    Animator animator = null;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //transform.Rotate(0,Random.Range(RandMin, RandMax), 0);
-        //transform.position += Vector3.forward * Speed * Time.deltaTime;
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (!isWalking)
+        if (!isWandering)
         {
             StartCoroutine(Wander());
         }
@@ -45,6 +43,10 @@ public class EnemyScript : MonoBehaviour
         Vector3 rot = transform.rotation.eulerAngles;
         rot = new Vector3(rot.x, rot.y + 180, rot.z);
         transform.rotation = Quaternion.Euler(rot);
+        if (collision.gameObject.tag == "Player")
+        {
+            animator.Play("attack");
+        }
     }
 
     IEnumerator Wander()
