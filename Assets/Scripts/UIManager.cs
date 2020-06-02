@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
     }
     internal void SetScore(int score)
     {
-        TxtScore.text = score.ToString();
+        TxtScore.text = $"SCORE: {score}";
     }
 
     internal void GamePause()
@@ -75,27 +75,7 @@ public class UIManager : MonoBehaviour
 
     internal void SetHealth(int health)
     {
-        TxtHealth.text = health.ToString();
-    }
-
-    IEnumerable FadeImg(Graphic img, float alpha, float duration, Action callback)
-    {
-        Color curr = img.color;
-        Color visible = img.color;
-        visible.a = alpha;
-        float counter = 0;
-
-        while (counter < duration)
-        {
-            counter += Time.deltaTime;
-            img.color = Color.Lerp(curr, visible, counter / duration);
-            yield return null;
-        }
-
-        if (callback != null)
-        {
-            callback();
-        }
+        TxtHealth.text = $"HEALTH: {health}";
     }
 
     internal void WinGame()

@@ -143,6 +143,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePoint (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -247,6 +252,7 @@ Transform:
   - {fileID: 1561702840}
   - {fileID: 2101001930}
   - {fileID: 1685359723}
+  - {fileID: 1638980915}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -266,7 +272,8 @@ GameObject:
   m_Component:
   - component: {fileID: 54730434}
   - component: {fileID: 54730433}
-  - component: {fileID: 54730432}
+  - component: {fileID: 54730435}
+  - component: {fileID: 54730436}
   m_Layer: 5
   m_Name: PanelBlood
   m_TagString: Untagged
@@ -274,34 +281,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &54730432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54730431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &54730433
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -320,8 +299,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 727279186}
+  m_Children: []
   m_Father: {fileID: 1498882428}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -330,6 +308,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &54730435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54730431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2315903e11a7041d0aa36dea32f76714, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!95 &54730436
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54730431}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 092cd609a6746be4e83d53751093d4f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &56077272
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +370,7 @@ GameObject:
   - component: {fileID: 56077277}
   m_Layer: 0
   m_Name: GreenKey
-  m_TagString: PowerUp
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -473,6 +498,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePoint (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -567,6 +597,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePoint(21)
       objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -643,6 +678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
+      objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -99.8
@@ -710,6 +749,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScorePoint (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -799,6 +843,10 @@ PrefabInstance:
     - target: {fileID: 1697357508118404, guid: 1e1ab22313304824f984d29f24782c07, type: 3}
       propertyPath: m_Name
       value: SM_Med_Saw_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697357508118404, guid: 1e1ab22313304824f984d29f24782c07, type: 3}
+      propertyPath: m_TagString
+      value: Saw
       objectReference: {fileID: 0}
     - target: {fileID: 4291352629824500, guid: 1e1ab22313304824f984d29f24782c07, type: 3}
       propertyPath: m_LocalPosition.x
@@ -927,6 +975,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
+      objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.4
@@ -998,6 +1050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
+      objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.4
@@ -1067,6 +1123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Med_Saw_03
       objectReference: {fileID: 0}
+    - target: {fileID: 1697357508118404, guid: 1e1ab22313304824f984d29f24782c07, type: 3}
+      propertyPath: m_TagString
+      value: Saw
+      objectReference: {fileID: 0}
     - target: {fileID: 4291352629824500, guid: 1e1ab22313304824f984d29f24782c07, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.45000076
@@ -1132,7 +1192,7 @@ GameObject:
   - component: {fileID: 310087039}
   m_Layer: 0
   m_Name: RedKey
-  m_TagString: PowerUp
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1405,6 +1465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
+      objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -98.9
@@ -1469,6 +1533,10 @@ PrefabInstance:
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
       objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1541,6 +1609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
+      objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.3
@@ -1608,6 +1680,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScorePoint (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -1802,6 +1879,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePoint (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1986,6 +2068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
+      objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -52.6
@@ -2053,6 +2139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScorePoint (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -2231,6 +2322,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePoint (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2325,6 +2421,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePoint (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2415,6 +2516,10 @@ PrefabInstance:
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
       objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2554,6 +2659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
+      objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.6
@@ -2620,7 +2729,7 @@ GameObject:
   - component: {fileID: 655616655}
   m_Layer: 0
   m_Name: YellowWall
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2718,6 +2827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
+      objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -95.2
@@ -2775,6 +2888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Med_Saw_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1697357508118404, guid: 1e1ab22313304824f984d29f24782c07, type: 3}
+      propertyPath: m_TagString
+      value: Saw
+      objectReference: {fileID: 0}
     - target: {fileID: 4291352629824500, guid: 1e1ab22313304824f984d29f24782c07, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.3
@@ -2825,79 +2942,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e1ab22313304824f984d29f24782c07, type: 3}
---- !u!1 &727279185
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 727279186}
-  - component: {fileID: 727279188}
-  - component: {fileID: 727279187}
-  m_Layer: 5
-  m_Name: BloodScreen
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &727279186
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727279185}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 54730434}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.30065918}
-  m_SizeDelta: {x: 0, y: -0.35998535}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &727279187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727279185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2315903e11a7041d0aa36dea32f76714, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &727279188
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727279185}
-  m_CullTransparentMesh: 0
 --- !u!1 &760327703
 GameObject:
   m_ObjectHideFlags: 0
@@ -3018,6 +3062,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScorePoint (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -3284,7 +3333,7 @@ GameObject:
   - component: {fileID: 946016034}
   m_Layer: 0
   m_Name: BlueWall
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3461,6 +3510,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScorePoint (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -3734,7 +3788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 264.8, y: -46.3}
+  m_AnchoredPosition: {x: 264.7998, y: -46.30005}
   m_SizeDelta: {x: 529.6, y: 92.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989755871
@@ -3877,6 +3931,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScorePoint (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -4088,6 +4147,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePoint (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4166,6 +4230,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScorePoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -4283,7 +4352,7 @@ GameObject:
   - component: {fileID: 1131995592}
   m_Layer: 0
   m_Name: GreenWall
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4381,6 +4450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
+      objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -100.5
@@ -4448,6 +4521,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScorePoint (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -4955,6 +5033,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePoint (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5072,6 +5155,10 @@ PrefabInstance:
       objectReference: {fileID: 1650601883}
     - target: {fileID: 1968476592218994, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968476592218994, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4889916270699016, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 3}
@@ -5288,7 +5375,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -40, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375648656
 MonoBehaviour:
@@ -5369,7 +5456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf506167bf0048fdb99634a6772f2fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiManager: {fileID: 0}
+  uiManager: {fileID: 1748959924}
 --- !u!1 &1393666984
 GameObject:
   m_ObjectHideFlags: 0
@@ -5485,6 +5572,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePoint (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5575,6 +5667,10 @@ PrefabInstance:
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
       objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5748,6 +5844,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScorePoint (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -5964,7 +6065,7 @@ GameObject:
   - component: {fileID: 1529572750}
   m_Layer: 0
   m_Name: YellowKey
-  m_TagString: PowerUp
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6089,7 +6190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -264.80005, y: -46.2}
+  m_AnchoredPosition: {x: -264.8003, y: -46.19995}
   m_SizeDelta: {x: 529.6001, y: 92.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533850618
@@ -6279,6 +6380,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePoint (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6375,7 +6481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638980914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -69.01, y: -4.55, z: 47.79}
+  m_LocalPosition: {x: -1038.201, y: -934.8337, z: 104.24454}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1749961018}
@@ -6400,7 +6506,7 @@ Transform:
   - {fileID: 1309697347}
   - {fileID: 1080488656}
   - {fileID: 4034545575063339650}
-  m_Father: {fileID: 1685359723}
+  m_Father: {fileID: 17318536}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647460966
@@ -6417,7 +6523,7 @@ GameObject:
   - component: {fileID: 1647460968}
   m_Layer: 0
   m_Name: RedWall
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6594,7 +6700,7 @@ GameObject:
   - component: {fileID: 1653062708}
   m_Layer: 0
   m_Name: Finish
-  m_TagString: PowerUp
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6710,6 +6816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
+      objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.9
@@ -6789,7 +6899,6 @@ Transform:
   - {fileID: 56077273}
   - {fileID: 1945540438}
   - {fileID: 1653062707}
-  - {fileID: 1638980915}
   m_Father: {fileID: 17318536}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6938,13 +7047,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118e729a89c7c63469b0469d10ddde27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TxtKeys: {fileID: 0}
-  TxtHealth: {fileID: 0}
-  TxtScore: {fileID: 0}
-  End: {fileID: 0}
-  Win: {fileID: 0}
-  Pause: {fileID: 0}
-  BloodScreen: {fileID: 0}
+  TxtKeys: {fileID: 2117815451}
+  TxtHealth: {fileID: 989755871}
+  TxtScore: {fileID: 1533850618}
+  End: {fileID: 849006883}
+  Win: {fileID: 1296701890}
+  Pause: {fileID: 1826845703}
+  BloodScreen: {fileID: 54730431}
 --- !u!4 &1749961018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
@@ -6961,6 +7070,10 @@ PrefabInstance:
     - target: {fileID: 1697357508118404, guid: 1e1ab22313304824f984d29f24782c07, type: 3}
       propertyPath: m_Name
       value: SM_Med_Saw_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697357508118404, guid: 1e1ab22313304824f984d29f24782c07, type: 3}
+      propertyPath: m_TagString
+      value: Saw
       objectReference: {fileID: 0}
     - target: {fileID: 4291352629824500, guid: 1e1ab22313304824f984d29f24782c07, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7030,6 +7143,10 @@ PrefabInstance:
     - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_Name
       value: Zombie (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300611964618398, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
+      propertyPath: m_TagString
+      value: Zombie
       objectReference: {fileID: 0}
     - target: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7368,6 +7485,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScorePoint (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7641,7 +7763,7 @@ GameObject:
   - component: {fileID: 1945540442}
   m_Layer: 0
   m_Name: BlueKey
-  m_TagString: PowerUp
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7753,6 +7875,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScorePoint (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}
@@ -8011,7 +8138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3.4, y: -94.6}
+  m_AnchoredPosition: {x: 3.4, y: -94.6001}
   m_SizeDelta: {x: 820, y: 189.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2117815451
@@ -8208,6 +8335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScorePoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682374703260687858, guid: 0d8aa335f36d34a76a64d67aa3910828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 4034545575063339650, guid: 0d8aa335f36d34a76a64d67aa3910828,
         type: 3}

@@ -6,6 +6,11 @@ TagManager:
   tags:
   - PowerUp
   - Enemy
+  - Door
+  - Saw
+  - Score
+  - Zombie
+  - Keys
   layers:
   - Default
   - TransparentFX
