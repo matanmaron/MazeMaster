@@ -12,13 +12,13 @@ public class EnemyScript : MonoBehaviour
     bool isWalking = false;
     Animator animator = null;
     AudioSource audioSource = null;
-    Rigidbody rigidbody = null;
+    Rigidbody rbody = null;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        rigidbody = GetComponent<Rigidbody>();
+        rbody = GetComponent<Rigidbody>();
         audioSource.PlayDelayed(Random.Range(0, 5f));
     }
 

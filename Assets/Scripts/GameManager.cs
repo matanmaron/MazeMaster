@@ -33,8 +33,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        uiManager.SetHealth(Data.Health);
+#if !UNITY_EDITOR
         Top.SetActive(true);
+#endif
+        uiManager.SetHealth(Data.Health);
         Cursor.lockState = CursorLockMode.Locked;
         GamePaused = false;
     }

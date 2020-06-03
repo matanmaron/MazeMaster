@@ -32,7 +32,11 @@ public class PlayerControll : MonoBehaviour
         var inputX = Input.GetAxis("Horizontal");
         if (inputX != 0 || inputY != 0)
         {
-            WalkAnim();
+            WalkAnim(true);
+        }
+        else
+        {
+            WalkAnim(false);
         }
         transform.position += transform.forward * Speed * inputY * Time.deltaTime;
         transform.position += transform.right * Speed * inputX * Time.deltaTime;
@@ -94,8 +98,15 @@ public class PlayerControll : MonoBehaviour
         animator.Play("pickup");
     }
 
-    void WalkAnim()
+    void WalkAnim(bool play)
     {
-        animator.Play("walk");
+        if (play)
+        {
+            animator.Play("walk");
+        }
+        else
+        {
+            animator.StopPlayback();
+        }
     }
 }
