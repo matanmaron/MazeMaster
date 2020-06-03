@@ -13,10 +13,12 @@ public class EnemyScript : MonoBehaviour
     bool isRotRight = false;
     bool isWalking = false;
     Animator animator = null;
+    Rigidbody rigidbody = null;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
