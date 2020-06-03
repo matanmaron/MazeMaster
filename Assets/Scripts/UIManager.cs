@@ -79,6 +79,12 @@ public class UIManager : MonoBehaviour
 
     internal void SetHealth(int health)
     {
+        if (GameManager.Instance.CheatInvulnerable)
+        {
+            TxtHealth.text = $"HEALTH: <color=red>INVULNERABLE</color>";
+            SetScore(0);
+            return;
+        }
         TxtHealth.text = $"HEALTH: {health}";
     }
 

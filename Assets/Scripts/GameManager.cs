@@ -14,10 +14,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] internal GameObject AudioObject = null;
     internal bool GamePaused = false;
     internal bool Cheater = false;
+    internal bool CheatInvulnerable = false;
 
-    bool Invulnerable = false;
+    bool invulnerable = false;
     float waitTime = 1f;
-    int cheat = 0;
+    int idkfa = 0;
+    int iddqd = 0;
 
     private void Awake()
     {
@@ -48,38 +50,71 @@ public class GameManager : MonoBehaviour
             OnGamePaused();
         }
         IDKFA();
+        IDDQD();
     }
 
-    private void IDKFA()
+    void IDDQD()
     {
-        if (Input.GetKeyDown(KeyCode.I) && cheat == 0)
+        if (Input.GetKeyDown(KeyCode.I) && iddqd == 0)
         {
-            cheat++;
+            iddqd++;
         }
-        else if(Input.GetKeyDown(KeyCode.D) && cheat == 1)
+        else if (Input.GetKeyDown(KeyCode.D) && iddqd == 1)
         {
-            cheat++;
+            iddqd++;
         }
-        else if (Input.GetKeyDown(KeyCode.K) && cheat == 2)
+        else if (Input.GetKeyDown(KeyCode.D) && iddqd == 2)
         {
-            cheat++;
+            iddqd++;
         }
-        else if (Input.GetKeyDown(KeyCode.F) && cheat == 3)
+        else if (Input.GetKeyDown(KeyCode.Q) && iddqd == 3)
         {
-            cheat++;
+            iddqd++;
         }
-        else if (Input.GetKeyDown(KeyCode.A) && cheat == 4)
+        else if (Input.GetKeyDown(KeyCode.D) && iddqd == 4)
+        {
+            Debug.Log("IDDQD");
+            CheatInvulnerable = !CheatInvulnerable;
+            Cheater = true;
+            uiManager.SetHealth(0);
+            iddqd = 0;
+        }
+        else if (Input.anyKeyDown)
+        {
+            idkfa = 0;
+        }
+    }
+
+    void IDKFA()
+    {
+        if (Input.GetKeyDown(KeyCode.I) && idkfa == 0)
+        {
+            idkfa++;
+        }
+        else if(Input.GetKeyDown(KeyCode.D) && idkfa == 1)
+        {
+            idkfa++;
+        }
+        else if (Input.GetKeyDown(KeyCode.K) && idkfa == 2)
+        {
+            idkfa++;
+        }
+        else if (Input.GetKeyDown(KeyCode.F) && idkfa == 3)
+        {
+            idkfa++;
+        }
+        else if (Input.GetKeyDown(KeyCode.A) && idkfa == 4)
         {
             Debug.Log("IDKFA");
             Data.Keys = new List<KeysEnum>(){ KeysEnum.Blue, KeysEnum.Green, KeysEnum.Red, KeysEnum.Yellow};
             Cheater = true;
             uiManager.SetKeys(Data.Keys);
             uiManager.SetScore(0);
-            cheat = 0;
+            idkfa = 0;
         }
         else if (Input.anyKeyDown)
         {
-            cheat = 0;
+            idkfa = 0;
         }
     }
 
@@ -221,9 +256,12 @@ public class GameManager : MonoBehaviour
     {
         if (Data.Health > 0)
         {
-            if (!Invulnerable)
+            if (!invulnerable)
             {
-                Data.Health -= hit;
+                if (!CheatInvulnerable)
+                {
+                    Data.Health -= hit;
+                }
                 if (Data.Health < 1)
                 {
                     Data.Health = 0;
@@ -241,11 +279,11 @@ public class GameManager : MonoBehaviour
     {
         if (Data.Health > 0)
         {
-            Invulnerable = true;
+            invulnerable = true;
             uiManager.ShowBlood(true);
             yield return new WaitForSeconds(waitTime);
             uiManager.ShowBlood(false);
-            Invulnerable = false;
+            invulnerable = false;
         }
     }
 }
