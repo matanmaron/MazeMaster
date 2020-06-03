@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -13,12 +11,15 @@ public class EnemyScript : MonoBehaviour
     bool isRotRight = false;
     bool isWalking = false;
     Animator animator = null;
+    AudioSource audioSource = null;
     Rigidbody rigidbody = null;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         rigidbody = GetComponent<Rigidbody>();
+        audioSource.PlayDelayed(Random.Range(0, 5f));
     }
 
     void Update()
