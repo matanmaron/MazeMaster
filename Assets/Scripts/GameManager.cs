@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -10,7 +8,7 @@ public class GameManager : MonoBehaviour
     internal static GameManager Instance { get; private set; }
     
     [SerializeField] UIManager uiManager = null;
-    [SerializeField] GameObject Top = null;
+    [SerializeField] GameObject AllEnemies = null;
     [SerializeField] internal GameObject AudioObject = null;
     internal bool GamePaused = false;
     internal bool Cheater = false;
@@ -35,11 +33,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-#if !UNITY_EDITOR
-        Top.SetActive(true);
-#endif
         uiManager.SetHealth(Data.Health);
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         GamePaused = false;
     }
 
@@ -118,16 +114,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void GameResume()
+    public void GameResume()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false; AllEnemies.SetActive(true);
         GamePaused = false;
         uiManager.GameResume();
     }
 
     void GamePause()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        AllEnemies.SetActive(false);
         GamePaused = true;
-        uiManager.GameResume();
+        uiManager.GamePause();
     }
 
     internal void OnGamePaused()
@@ -142,9 +143,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    internal void Reset()
+    public void Menu()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(0);
     }
 
     internal void Quit()
@@ -237,6 +238,7 @@ public class GameManager : MonoBehaviour
     {
         uiManager.WinGame();
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Destroy(collision.gameObject, 0.01f);
     }
 

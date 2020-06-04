@@ -4,13 +4,17 @@ using System.Runtime.InteropServices.ComTypes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI MusicText = null;
     [SerializeField] TextMeshProUGUI SFXText = null;
+    [SerializeField] TextMeshProUGUI InvertMouse = null;
     [SerializeField] GameObject MenuPanel = null;
     [SerializeField] GameObject SettingsPanel = null;
+    [SerializeField] Slider MouseSensitivitySlider = null;
+    [SerializeField] TextMeshProUGUI MouseSensitivitySliderText = null;
 
     private void Start()
     {
@@ -32,6 +36,16 @@ public class MenuManager : MonoBehaviour
         {
             SFXText.text = "SFX: ON";
         }
+        if (Settings.Invert)
+        {
+            InvertMouse.text = "Invert Mouse: ON";
+        }
+        else
+        {
+            InvertMouse.text = "Invert Mouse: OFF";
+        }
+        MouseSensitivitySliderText.text = $"Mouse Sensitivity: {Settings.MouseSensitivity}";
+        MouseSensitivitySlider.value = Settings.MouseSensitivity;
     }
 
     public void OnStartButton()
@@ -74,6 +88,26 @@ public class MenuManager : MonoBehaviour
         {
             Settings.MuteSFX = true;
             SFXText.text = "SFX: OFF";
+        }
+    }
+
+    public void OnMouseSensitivity()
+    {
+        Settings.MouseSensitivity = MouseSensitivitySlider.value;
+        MouseSensitivitySliderText.text = $"Mouse Sensitivity: {Settings.MouseSensitivity:0.0}";
+    }
+
+    public void OnInvertMouse()
+    {
+        if (Settings.Invert)
+        {
+            Settings.Invert = false;
+            InvertMouse.text = "Invert Mouse: OFF";
+        }
+        else
+        {
+            Settings.Invert = true;
+            InvertMouse.text = "Invert Mouse: ON";
         }
     }
 

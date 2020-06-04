@@ -12,14 +12,15 @@ public class EnemyScript : MonoBehaviour
     bool isWalking = false;
     Animator animator = null;
     AudioSource audioSource = null;
-    Rigidbody rbody = null;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        rbody = GetComponent<Rigidbody>();
-        audioSource.PlayDelayed(Random.Range(0, 5f));
+        if (!Settings.MuteSFX)
+        {
+            audioSource.PlayDelayed(Random.Range(0, 5f));
+        }
     }
 
     void Update()
@@ -49,7 +50,10 @@ public class EnemyScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(rot);
         if (collision.gameObject.tag == "Player")
         {
-            Bite.Play();
+            if (!Settings.MuteSFX)
+            {
+                Bite.Play();
+            }
             animator.Play("attack");
             transform.LookAt(collision.transform);
         }
@@ -64,22 +68,51 @@ public class EnemyScript : MonoBehaviour
         int walkTime = Random.Range(1, 5);
 
         isWandering = true;
-
+        if (GameManager.Instance.GamePaused)
+        {
+            isWandering = false;
+            StopAllCoroutines();
+        }
         yield return new WaitForSeconds(walkWait);
+        if (GameManager.Instance.GamePaused)
+        {
+            isWandering = false;
+            StopAllCoroutines();
+        }
         isWalking = true;
         yield return new WaitForSeconds(walkTime);
+        if (GameManager.Instance.GamePaused)
+        {
+            isWandering = false;
+            StopAllCoroutines();
+        }
         isWalking = false;
         yield return new WaitForSeconds(rotWait);
+        if (GameManager.Instance.GamePaused)
+        {
+            isWandering = false;
+            StopAllCoroutines();
+        }
         if (rotLoR==1)
         {
             isRotRight = true;
             yield return new WaitForSeconds(rotTime);
+            if (GameManager.Instance.GamePaused)
+            {
+                isWandering = false;
+                StopAllCoroutines();
+            }
             isRotRight = false;
         }
         if (rotLoR==2)
         {
             isRotLeft = true;
             yield return new WaitForSeconds(rotTime);
+            if (GameManager.Instance.GamePaused)
+            {
+                isWandering = false;
+                StopAllCoroutines();
+            }
             isRotLeft = false;
         }
         isWandering = false;

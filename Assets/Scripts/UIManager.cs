@@ -40,15 +40,11 @@ public class UIManager : MonoBehaviour
     internal void GamePause()
     {
         Pause.SetActive(true);
-        Time.timeScale = 0f;
-        Cursor.lockState = CursorLockMode.None;
     }
 
     internal void GameResume()
     {
         Pause.SetActive(false);
-        Time.timeScale = 1f;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     internal void SetKeys(List<KeysEnum> keys)

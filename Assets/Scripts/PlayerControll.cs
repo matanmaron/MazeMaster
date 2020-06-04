@@ -22,6 +22,10 @@ public class PlayerControll : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.GamePaused)
+        {
+            return;
+        }
         MovePlayer();
         MoveCamera();
     }
@@ -106,7 +110,7 @@ public class PlayerControll : MonoBehaviour
         }
         else
         {
-            animator.StopPlayback();
+            animator.Play("idle");
         }
     }
 }

@@ -845,14 +845,14 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32c05fa29c15f42ecb1ac0584a439839, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 130
-  DopplerLevel: 1.59
+  DopplerLevel: 0.62
   MinDistance: 5
   MaxDistance: 25
   Pan2D: 0
@@ -904,7 +904,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.06111111
+      value: 0.047222223
       inSlope: 0
       outSlope: 0
       tangentMode: 0

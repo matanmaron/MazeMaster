@@ -8,6 +8,7 @@ public class FlashingKeyScript : MonoBehaviour
     Color colorStart = Color.white;
     float duration = 1.0f;
     Renderer rend = null;
+    public float Speed = 100;
 
     void Start()
     {
@@ -18,5 +19,9 @@ public class FlashingKeyScript : MonoBehaviour
     {
         float lerp = Mathf.PingPong(Time.time, duration) / duration;
         rend.material.color = Color.Lerp(colorStart, colorEnd, lerp);
+    }
+    void LateUpdate()
+    {
+        transform.RotateAround(transform.position, Vector3.up * Speed * Time.deltaTime, 1.0f);
     }
 }
