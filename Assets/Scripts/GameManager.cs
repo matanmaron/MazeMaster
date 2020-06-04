@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
         }
         else if (Input.anyKeyDown)
         {
-            idkfa = 0;
+            iddqd = 0;
         }
     }
 
