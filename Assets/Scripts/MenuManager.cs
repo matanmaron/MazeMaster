@@ -60,7 +60,7 @@ public class MenuManager : MonoBehaviour
 
     public void OnAboutButton()
     {
-        Application.OpenURL("https://matanmaron.wixsite.com/home/about");
+        Application.OpenURL("https://matanmaron.wixsite.com/home");
     }
 
     public void OnMusic()
