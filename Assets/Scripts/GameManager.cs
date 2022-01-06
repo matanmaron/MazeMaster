@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     internal bool GamePaused = false;
     internal bool Cheater = false;
     internal bool CheatInvulnerable = false;
-
+    public bool GameOver;
     bool invulnerable = false;
     float waitTime = 1f;
     int idkfa = 0;
@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         GamePaused = false;
+        GameOver = false;
     }
 
     private void Update()
@@ -153,15 +154,15 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    internal void HitDoors(Collision collision)
+    internal void HitDoors(GameObject obj)
     {
-        var objName = collision.gameObject.name;
+        var objName = obj.name;
         if (objName.Contains("Yellow"))
         {
             if (Data.Keys.Contains(KeysEnum.Yellow))
             {
                 Data.Keys.Remove(KeysEnum.Yellow);
-                Destroy(collision.gameObject, 0.01f);
+                Destroy(obj, 0.01f);
             }
         }
         else if (objName.Contains("Red"))
@@ -169,7 +170,7 @@ public class GameManager : MonoBehaviour
             if (Data.Keys.Contains(KeysEnum.Red))
             {
                 Data.Keys.Remove(KeysEnum.Red);
-                Destroy(collision.gameObject, 0.01f);
+                Destroy(obj, 0.01f);
             }
         }
         else if (objName.Contains("Green"))
@@ -177,7 +178,7 @@ public class GameManager : MonoBehaviour
             if (Data.Keys.Contains(KeysEnum.Green))
             {
                 Data.Keys.Remove(KeysEnum.Green);
-                Destroy(collision.gameObject, 0.01f);
+                Destroy(obj, 0.01f);
             }
         }
         else if (objName.Contains("Blue"))
@@ -185,22 +186,22 @@ public class GameManager : MonoBehaviour
             if (Data.Keys.Contains(KeysEnum.Blue))
             {
                 Data.Keys.Remove(KeysEnum.Blue);
-                Destroy(collision.gameObject, 0.01f);
+                Destroy(obj, 0.01f);
             }
         }
         uiManager.SetKeys(Data.Keys);
     }
 
-    internal void HitKeys(Collision collision)
+    internal void HitKeys(GameObject obj)
     {
-        var objName = collision.gameObject.name;
+        var objName = obj.name;
         if (objName.Contains("Yellow"))
         {
             if (!Data.Keys.Contains(KeysEnum.Yellow))
             {
                 Data.Keys.Add(KeysEnum.Yellow);
             }
-            Destroy(collision.gameObject,0.01f);
+            Destroy(obj,0.01f);
         }
         else if (objName.Contains("Red"))
         {
@@ -208,7 +209,7 @@ public class GameManager : MonoBehaviour
             {
                 Data.Keys.Add(KeysEnum.Red);
             }
-            Destroy(collision.gameObject, 0.01f);
+            Destroy(obj, 0.01f);
         }
         else if (objName.Contains("Green"))
         {
@@ -216,7 +217,7 @@ public class GameManager : MonoBehaviour
             {
                 Data.Keys.Add(KeysEnum.Green);
             }
-            Destroy(collision.gameObject, 0.01f);
+            Destroy(obj, 0.01f);
         }
         else if (objName.Contains("Blue"))
         {
@@ -224,7 +225,7 @@ public class GameManager : MonoBehaviour
             {
                 Data.Keys.Add(KeysEnum.Blue);
             }
-            Destroy(collision.gameObject, 0.01f);
+            Destroy(obj, 0.01f);
         }
         uiManager.SetKeys(Data.Keys);
     }
@@ -234,19 +235,20 @@ public class GameManager : MonoBehaviour
         DamagePlayer(40);
     }
 
-    internal void HitFinish(Collision collision)
+    internal void HitFinish(GameObject obj)
     {
+        GameOver = true;
         uiManager.WinGame();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        Destroy(collision.gameObject, 0.01f);
+        Destroy(obj.gameObject, 0.01f);
     }
 
-    internal void HitScore(Collision collision)
+    internal void HitScore(GameObject obj)
     {
         Data.Score++;
         uiManager.SetScore(Data.Score);
-        Destroy(collision.gameObject, 0.01f);
+        Destroy(obj.gameObject, 0.01f);
     }
 
     internal void HitEnemy()
@@ -266,9 +268,9 @@ public class GameManager : MonoBehaviour
                 }
                 if (Data.Health < 1)
                 {
+                    GameOver = true;
                     Data.Health = 0;
                     uiManager.ShowEnd();
-                    Invoke("Reset", 3);
                 }
                 uiManager.SetHealth(Data.Health);
                 //make Invulnerable for 2 sec

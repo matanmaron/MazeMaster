@@ -15,7 +15,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject SettingsPanel = null;
     [SerializeField] Slider MouseSensitivitySlider = null;
     [SerializeField] TextMeshProUGUI MouseSensitivitySliderText = null;
-
+    [SerializeField] AudioSource Music = null;
     private void Start()
     {
         MenuPanel.SetActive(true);
@@ -23,10 +23,12 @@ public class MenuManager : MonoBehaviour
         if (Settings.MuteMusic)
         {
             MusicText.text = "Music: OFF";
+            Music.Pause();
         }
         else
         {
             MusicText.text = "Music: ON";
+            Music.Play();
         }
         if (Settings.MuteSFX)
         {
@@ -69,11 +71,13 @@ public class MenuManager : MonoBehaviour
         {
             Settings.MuteMusic = false;
             MusicText.text = "Music: ON";
+            Music.Play();
         }
         else
         {
             Settings.MuteMusic = true;
             MusicText.text = "Music: OFF";
+            Music.Pause();
         }
     }
 

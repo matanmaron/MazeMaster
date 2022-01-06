@@ -5,14 +5,19 @@ using UnityEngine;
 
 public class PlayerControll : MonoBehaviour
 {
-    [SerializeField] GameObject CameraHolder = null;
-    [SerializeField] float Speed = 15;
-    float camera_minimumY = -10;
-    float camera_maximumY = 50;
-    float player_rotationX = 0;
-    float camera_rotationY = 0;
-    float camera_rotationX = 0;
+    [SerializeField] CharacterController controller;
+    [SerializeField] Transform groundCheck;
+    [SerializeField] LayerMask groundMask;
+    Vector3 velocity;
+    const float speed = 12f;
+    const float groundDistance = 0.4f;
+    const float gravity = -9.81f * 2;
+    const float jumpHeight = 3f;
+    bool isGrounded;
     Animator animator = null;
+    public float mouseSensitivity = 100f;
+    private float xRotation;
+    [SerializeField] Transform PlayerCamera;
 
     private void Start()
     {
@@ -22,7 +27,7 @@ public class PlayerControll : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.GamePaused)
+        if (GameManager.Instance.GamePaused || GameManager.Instance.GameOver)
         {
             return;
         }
@@ -32,9 +37,14 @@ public class PlayerControll : MonoBehaviour
 
     void MovePlayer()
     {
-        var inputY = Input.GetAxis("Vertical");
-        var inputX = Input.GetAxis("Horizontal");
-        if (inputX != 0 || inputY != 0)
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f; //force player to the ground, better then 0
+        }
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+        if (x != 0 || z != 0)
         {
             WalkAnim(true);
         }
@@ -42,58 +52,62 @@ public class PlayerControll : MonoBehaviour
         {
             WalkAnim(false);
         }
-        transform.position += transform.forward * Speed * inputY * Time.deltaTime;
-        transform.position += transform.right * Speed * inputX * Time.deltaTime;
-        player_rotationX += Input.GetAxis("Mouse X") * Settings.MouseSensitivity;
-        transform.localEulerAngles = new Vector3(0, player_rotationX, 0);
-
+        Vector3 move = transform.right * x + transform.forward * z;
+        controller.Move(move * speed * Time.deltaTime);
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+        }
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 
     void MoveCamera()
     {
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         if (Settings.Invert)
         {
-            camera_rotationY -= Input.GetAxis("Mouse Y") * Settings.MouseSensitivity;
+            xRotation += mouseY;
         }
         else
         {
-            camera_rotationY += Input.GetAxis("Mouse Y") * Settings.MouseSensitivity;
+            xRotation -= mouseY;
         }
-        camera_rotationX += Input.GetAxis("Mouse X") * Settings.MouseSensitivity;
-        camera_rotationY = Mathf.Clamp(camera_rotationY, camera_minimumY, camera_maximumY);
-        CameraHolder.transform.localEulerAngles = new Vector3(-camera_rotationY, camera_rotationX, 0);
-        CameraHolder.transform.position = transform.position;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        PlayerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        transform.Rotate(Vector3.up * mouseX);
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnControllerColliderHit(ControllerColliderHit collision)
     {
         var objName = collision.gameObject.tag;
-        if (objName.Contains("Zombie"))
+        if (objName.Contains("Score"))
         {
-            GameManager.Instance.HitEnemy();
+            PickUpAnim();
+            GameManager.Instance.HitScore(collision.gameObject);
         }
         else if (objName.Contains("Keys"))
         {
             PickUpAnim();
-            GameManager.Instance.HitKeys(collision);
+            GameManager.Instance.HitKeys(collision.gameObject);
+        }
+        else if (objName.Contains("Zombie"))
+        {
+            GameManager.Instance.HitEnemy();
         }
         else if (objName.Contains("Door"))
         {
-            GameManager.Instance.HitDoors(collision);
+            GameManager.Instance.HitDoors(collision.gameObject);
         }
         else if (objName.Contains("Saw"))
         {
             GameManager.Instance.HitSaw();
         }
-        else if (objName.Contains("Score"))
-        {
-            PickUpAnim();
-            GameManager.Instance.HitScore(collision);
-        }
         else if (objName.Contains("Finish"))
         {
             PickUpAnim();
-            GameManager.Instance.HitFinish(collision);
+            GameManager.Instance.HitFinish(collision.gameObject);
         }
     }
 
