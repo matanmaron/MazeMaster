@@ -247,8 +247,11 @@ public class GameManager : MonoBehaviour
     internal void HitScore(GameObject obj)
     {
         Data.Score++;
+        obj.GetComponent<Collider>().enabled = false;
+        obj.GetComponent<AudioSource>().Play();
+        obj.GetComponent<ScorePointScript>().isUp = true;
         uiManager.SetScore(Data.Score);
-        Destroy(obj.gameObject, 0.01f);
+        Destroy(obj.gameObject, 1.5f);
     }
 
     internal void HitEnemy()
