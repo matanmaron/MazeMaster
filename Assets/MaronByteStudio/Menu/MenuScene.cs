@@ -2,6 +2,7 @@ using MaronByteStudio.MazeMaster;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace MaronByteStudio.Menu
 {
@@ -34,7 +35,11 @@ namespace MaronByteStudio.Menu
             AboutPanel.SetActive(false);
             switch (current)
             {
-                case Panels.Menu: MenuPanel.SetActive(true); break;
+                case
+                Panels.Menu:
+                    MenuPanel.SetActive(true);
+                    EventSystem.current.SetSelectedGameObject(StartButton.gameObject);
+                    break;
                 case Panels.Options: OptionPanel.SetActive(true); break;
                 case Panels.About: AboutPanel.SetActive(true); break;
                 default: Debug.LogError("Panel not supported"); break;
@@ -63,7 +68,7 @@ namespace MaronByteStudio.Menu
 
         private void OnOpenOptions()
         {
-           SetPanel(Panels.Options);
+            SetPanel(Panels.Options);
         }
 
         private void OnStartGame()

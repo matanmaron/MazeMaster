@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using MaronByteStudio.MazeMaster;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     internal static GameManager Instance { get; private set; }
-
+    [SerializeField] GameObject FirstPauseMenuButton;
     [SerializeField] InputActionReference inputActionMenu;
     [SerializeField] UIManager uiManager = null;
     [SerializeField] GameObject AllEnemies = null;
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         uiManager.SetHealth(Data.Health);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -138,6 +140,7 @@ public class GameManager : MonoBehaviour
         AllEnemies.SetActive(true);
         GamePaused = false;
         uiManager.GameResume();
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     void GamePause()
@@ -147,6 +150,7 @@ public class GameManager : MonoBehaviour
         AllEnemies.SetActive(false);
         GamePaused = true;
         uiManager.GamePause();
+        EventSystem.current.SetSelectedGameObject(FirstPauseMenuButton);
     }
 
     private void OnMenuKeyPressed(InputAction.CallbackContext context)

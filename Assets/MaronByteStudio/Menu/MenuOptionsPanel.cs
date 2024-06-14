@@ -1,6 +1,7 @@
 using MaronByteStudio.MazeMaster;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace MaronByteStudio.Menu
@@ -28,6 +29,11 @@ namespace MaronByteStudio.Menu
             InitButtons();
         }
 
+        private void OnEnable()
+        {
+            EventSystem.current.SetSelectedGameObject(InvertMouseButton.gameObject);
+        }
+        
         private void InitButtons()
         {
             string invertMouse = Settings.Invert ? "On" : "Off";

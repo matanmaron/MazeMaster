@@ -8113,6 +8113,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1207078675}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1207078677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4406504186164905401, guid: 7a2d0ceb844391c40a8c52de800cd522,
+    type: 3}
+  m_PrefabInstance: {fileID: 1207078675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1218681557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4846736819855508, guid: 0584839bceadb844fa31b1ca352056ba,
@@ -9658,6 +9664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf506167bf0048fdb99634a6772f2fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FirstPauseMenuButton: {fileID: 1207078677}
   inputActionMenu: {fileID: 8487239992000981294, guid: a0d90299266625e4f85b9cea3bf4d322,
     type: 3}
   uiManager: {fileID: 1748959924}
