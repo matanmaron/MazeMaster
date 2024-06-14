@@ -149,10 +149,7 @@ public class GameManager : MonoBehaviour
 
     private void OnMenuKeyPressed(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            OnGamePaused();
-        }
+        OnGamePaused();
     }
 
     internal void OnGamePaused()

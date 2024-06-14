@@ -15,9 +15,11 @@ public class PlayerControll : MonoBehaviour
     const float jumpHeight = 3f;
     bool isGrounded;
     Animator animator = null;
-    public float mouseSensitivity = 1f;
+    public float mouseSensitivity = 0.01f;
     private float xRotation;
-    [SerializeField] Transform PlayerCamera;
+
+    [SerializeField]
+    Transform PlayerCamera;
 
     private void Start()
     {
@@ -64,6 +66,7 @@ public class PlayerControll : MonoBehaviour
     void MoveCamera()
     {
         Vector2 mouse = inputActionLook.action.ReadValue<Vector2>();
+        mouse *= 0.5f;
         float mouseX = mouse.x * mouseSensitivity * Time.deltaTime;
         float mouseY = mouse.y * mouseSensitivity * Time.deltaTime;
         if (Settings.Invert)
