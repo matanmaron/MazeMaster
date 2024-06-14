@@ -6489,6 +6489,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969656337}
   m_CullTransparentMesh: 0
+--- !u!1 &974121765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4406504186164905401, guid: 7a2d0ceb844391c40a8c52de800cd522,
+    type: 3}
+  m_PrefabInstance: {fileID: 209394837}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &981830615
 GameObject:
   m_ObjectHideFlags: 0
@@ -9759,6 +9765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirstPauseMenuButton: {fileID: 1207078677}
+  FirstWinMenuButton: {fileID: 974121765}
   inputActionMenu: {fileID: 8487239992000981294, guid: a0d90299266625e4f85b9cea3bf4d322,
     type: 3}
   uiManager: {fileID: 1748959924}

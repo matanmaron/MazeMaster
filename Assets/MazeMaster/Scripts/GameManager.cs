@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     internal static GameManager Instance { get; private set; }
     [SerializeField] GameObject FirstPauseMenuButton;
+    [SerializeField] GameObject FirstWinMenuButton;
     [SerializeField] InputActionReference inputActionMenu;
     [SerializeField] UIManager uiManager = null;
     [SerializeField] GameObject AllEnemies = null;
@@ -305,6 +306,7 @@ public class GameManager : MonoBehaviour
     {
         GameOver = true;
         uiManager.WinGame();
+        EventSystem.current.SetSelectedGameObject(FirstWinMenuButton);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Destroy(obj.gameObject, 0.01f);
