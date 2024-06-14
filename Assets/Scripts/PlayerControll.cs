@@ -15,7 +15,7 @@ public class PlayerControll : MonoBehaviour
     const float jumpHeight = 3f;
     bool isGrounded;
     Animator animator = null;
-    public float mouseSensitivity = 0.01f;
+    public float mouseSensitivity;
     private float xRotation;
 
     [SerializeField]
@@ -65,10 +65,16 @@ public class PlayerControll : MonoBehaviour
 
     void MoveCamera()
     {
-        Vector2 mouse = inputActionLook.action.ReadValue<Vector2>();
-        mouse *= 0.5f;
-        float mouseX = mouse.x * mouseSensitivity * Time.deltaTime;
-        float mouseY = mouse.y * mouseSensitivity * Time.deltaTime;
+        Vector2 gamepad = inputActionLook.action.ReadValue<Vector2>();
+        Vector2 realMouse = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        Debug.Log($"MoveCamera {gamepad},{realMouse}");
+        float mouseX =  gamepad.x * mouseSensitivity * Time.deltaTime;
+        float mouseY =  gamepad.y * mouseSensitivity * Time.deltaTime;
+        if (gamepad == Vector2.zero)
+        {
+            mouseX =  realMouse.x * mouseSensitivity * Time.deltaTime;
+            mouseY =  realMouse.y * mouseSensitivity * Time.deltaTime;
+        }
         if (Settings.Invert)
         {
             xRotation += mouseY;

@@ -14451,8 +14451,20 @@ PrefabInstance:
       objectReference: {fileID: -6213723972385196018, guid: a0d90299266625e4f85b9cea3bf4d322,
         type: 3}
     - target: {fileID: 1388621344, guid: 41d9b3a528842ad46a577d2bbccf952d, type: 3}
+      propertyPath: mouseSensitivity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388621344, guid: 41d9b3a528842ad46a577d2bbccf952d, type: 3}
       propertyPath: groundMask.m_Bits
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388621344, guid: 41d9b3a528842ad46a577d2bbccf952d, type: 3}
+      propertyPath: mouseSensitivityX
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388621344, guid: 41d9b3a528842ad46a577d2bbccf952d, type: 3}
+      propertyPath: mouseSensitivityY
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1388621344, guid: 41d9b3a528842ad46a577d2bbccf952d, type: 3}
       propertyPath: inputActionLook.m_Name
@@ -14561,7 +14573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: a0d90299266625e4f85b9cea3bf4d322,
     type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -14574,10 +14586,10 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1650601886}
 --- !u!1001 &2211581040049391876
 PrefabInstance:
   m_ObjectHideFlags: 0
