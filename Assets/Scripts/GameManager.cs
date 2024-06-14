@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     internal static GameManager Instance { get; private set; }
-    
+
+    [SerializeField] InputActionReference inputActionMenu;
     [SerializeField] UIManager uiManager = null;
     [SerializeField] GameObject AllEnemies = null;
     [SerializeField] internal GameObject AudioObject = null;
@@ -31,6 +33,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        inputActionMenu.action.started += OnMenuKeyPressed;
+    }
+
+    private void OnDisable()
+    {
+        inputActionMenu.action.started -= OnMenuKeyPressed;
+    }
+
     void Start()
     {
         uiManager.SetHealth(Data.Health);
@@ -42,10 +54,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            OnGamePaused();
-        }
         IDKFA();
         IDDQD();
     }
@@ -88,7 +96,7 @@ public class GameManager : MonoBehaviour
         {
             idkfa++;
         }
-        else if(Input.GetKeyDown(KeyCode.D) && idkfa == 1)
+        else if (Input.GetKeyDown(KeyCode.D) && idkfa == 1)
         {
             idkfa++;
         }
@@ -103,7 +111,13 @@ public class GameManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.A) && idkfa == 4)
         {
             Debug.Log("IDKFA");
-            Data.Keys = new List<KeysEnum>(){ KeysEnum.Blue, KeysEnum.Green, KeysEnum.Red, KeysEnum.Yellow};
+            Data.Keys = new List<KeysEnum>()
+            {
+                KeysEnum.Blue,
+                KeysEnum.Green,
+                KeysEnum.Red,
+                KeysEnum.Yellow
+            };
             Cheater = true;
             uiManager.SetKeys(Data.Keys);
             uiManager.SetScore(0);
@@ -118,7 +132,8 @@ public class GameManager : MonoBehaviour
     public void GameResume()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false; AllEnemies.SetActive(true);
+        Cursor.visible = false;
+        AllEnemies.SetActive(true);
         GamePaused = false;
         uiManager.GameResume();
     }
@@ -130,6 +145,14 @@ public class GameManager : MonoBehaviour
         AllEnemies.SetActive(false);
         GamePaused = true;
         uiManager.GamePause();
+    }
+
+    private void OnMenuKeyPressed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            OnGamePaused();
+        }
     }
 
     internal void OnGamePaused()
@@ -201,7 +224,7 @@ public class GameManager : MonoBehaviour
             {
                 Data.Keys.Add(KeysEnum.Yellow);
             }
-            Destroy(obj,0.01f);
+            Destroy(obj, 0.01f);
         }
         else if (objName.Contains("Red"))
         {

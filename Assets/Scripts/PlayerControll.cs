@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerControll : MonoBehaviour
 {
     [SerializeField] CharacterController controller;
+    [SerializeField] InputActionReference inputActionMove;
+    [SerializeField] InputActionReference inputActionLook;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundMask;
     Vector3 velocity;
@@ -15,7 +15,7 @@ public class PlayerControll : MonoBehaviour
     const float jumpHeight = 3f;
     bool isGrounded;
     Animator animator = null;
-    public float mouseSensitivity = 100f;
+    public float mouseSensitivity = 1f;
     private float xRotation;
     [SerializeField] Transform PlayerCamera;
 
@@ -25,7 +25,7 @@ public class PlayerControll : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (GameManager.Instance.GamePaused || GameManager.Instance.GameOver)
         {
@@ -42,9 +42,8 @@ public class PlayerControll : MonoBehaviour
         {
             velocity.y = -2f; //force player to the ground, better then 0
         }
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        if (x != 0 || z != 0)
+        Vector2 movment = inputActionMove.action.ReadValue<Vector2>();
+        if (movment.x != 0 || movment.y != 0)
         {
             WalkAnim(true);
         }
@@ -52,7 +51,7 @@ public class PlayerControll : MonoBehaviour
         {
             WalkAnim(false);
         }
-        Vector3 move = transform.right * x + transform.forward * z;
+        Vector3 move = transform.right * movment.x + transform.forward * movment.y;
         controller.Move(move * speed * Time.deltaTime);
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -64,8 +63,9 @@ public class PlayerControll : MonoBehaviour
 
     void MoveCamera()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        Vector2 mouse = inputActionLook.action.ReadValue<Vector2>();
+        float mouseX = mouse.x * mouseSensitivity * Time.deltaTime;
+        float mouseY = mouse.y * mouseSensitivity * Time.deltaTime;
         if (Settings.Invert)
         {
             xRotation += mouseY;
