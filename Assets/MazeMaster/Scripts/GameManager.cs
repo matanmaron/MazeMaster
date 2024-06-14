@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] UIManager uiManager = null;
     [SerializeField] GameObject AllEnemies = null;
     [SerializeField] internal GameObject AudioObject = null;
+    [SerializeField] GameObject DirectionalLight;
     internal bool GamePaused = false;
     internal bool Cheater = false;
     internal bool CheatInvulnerable = false;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     float waitTime = 1f;
     int idkfa = 0;
     int iddqd = 0;
+    int idclip = 0;
 
     private void Awake()
     {
@@ -60,6 +62,43 @@ public class GameManager : MonoBehaviour
     {
         IDKFA();
         IDDQD();
+        IDCLIP();
+    }
+
+    void IDCLIP()
+    {
+        if (Input.GetKeyDown(KeyCode.I) && idclip == 0)
+        {
+            idclip++;
+        }
+        else if (Input.GetKeyDown(KeyCode.D) && idclip == 1)
+        {
+            idclip++;
+        }
+        else if (Input.GetKeyDown(KeyCode.C) && idclip == 2)
+        {
+            idclip++;
+        }
+        else if (Input.GetKeyDown(KeyCode.L) && idclip == 3)
+        {
+            idclip++;
+        }
+        else if (Input.GetKeyDown(KeyCode.I) && idclip == 4)
+        {
+            idclip++;
+        }
+        else if (Input.GetKeyDown(KeyCode.P) && idclip == 5)
+        {
+            Debug.Log("IDCLIP");
+            Cheater = true;
+            DirectionalLight.SetActive(!DirectionalLight.activeSelf);
+            uiManager.SetScore(0);
+            idclip = 0;
+        }
+        else if (Input.anyKeyDown)
+        {
+            idclip = 0;
+        }
     }
 
     void IDDQD()
@@ -86,6 +125,7 @@ public class GameManager : MonoBehaviour
             CheatInvulnerable = !CheatInvulnerable;
             Cheater = true;
             uiManager.SetHealth(0);
+            uiManager.SetScore(0);
             iddqd = 0;
         }
         else if (Input.anyKeyDown)
