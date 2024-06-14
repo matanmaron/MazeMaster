@@ -1,4 +1,3 @@
-using System;
 using System.IO;
 using UnityEngine;
 
@@ -7,10 +6,8 @@ namespace MaronByteStudio.MazeMaster
     public class AudioManager : Singleton<AudioManager>
     {
         [SerializeField] AudioSource MusicSource;
-        [SerializeField] AudioSource SoundSource;
 
         private bool isMusicOn = true;
-        private bool isSoundOn = true;
 
         public bool IsMusicOn
         {
@@ -19,16 +16,6 @@ namespace MaronByteStudio.MazeMaster
             {
                 isMusicOn = value;
                 MusicSource.mute = !isMusicOn;
-            }
-        }
-
-        public bool IsSoundOn
-        {
-            get => isSoundOn;
-            set
-            {
-                isSoundOn = value;
-                SoundSource.mute = !isSoundOn;
             }
         }
 
@@ -52,7 +39,6 @@ namespace MaronByteStudio.MazeMaster
         internal void Refresh()
         {
             IsMusicOn = !Settings.MuteMusic;
-            isSoundOn = !Settings.MuteSFX;
         }
     }
 

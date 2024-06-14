@@ -1,7 +1,6 @@
 using MaronByteStudio.MazeMaster;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace MaronByteStudio.Menu
@@ -27,11 +26,6 @@ namespace MaronByteStudio.Menu
             BackButton.onClick.AddListener(() => menu.OnBackButton());
             InvertMouseButton.onClick.AddListener(OnInvertMouse);
             InitButtons();
-        }
-
-        private void OnEnable()
-        {
-            EventSystem.current.SetSelectedGameObject(InvertMouseButton.gameObject);
         }
         
         private void InitButtons()

@@ -16,6 +16,8 @@ namespace MaronByteStudio.Menu
         [SerializeField] GameObject OptionPanel;
         [SerializeField] GameObject AboutPanel;
         [SerializeField] string StartScene;
+        [SerializeField] GameObject FirstOptionsMenuButton;
+        [SerializeField] GameObject FirstAboutMenuButton;
 
         private void Start()
         {
@@ -40,8 +42,16 @@ namespace MaronByteStudio.Menu
                     MenuPanel.SetActive(true);
                     EventSystem.current.SetSelectedGameObject(StartButton.gameObject);
                     break;
-                case Panels.Options: OptionPanel.SetActive(true); break;
-                case Panels.About: AboutPanel.SetActive(true); break;
+                case
+                Panels.Options:
+                    OptionPanel.SetActive(true);
+                    EventSystem.current.SetSelectedGameObject(FirstOptionsMenuButton);
+                    break;
+                case
+                Panels.About:
+                    AboutPanel.SetActive(true);
+                    EventSystem.current.SetSelectedGameObject(FirstAboutMenuButton);
+                    break;
                 default: Debug.LogError("Panel not supported"); break;
             }
         }

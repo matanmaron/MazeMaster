@@ -12,6 +12,7 @@ public class Hit : MonoBehaviour
         {
             Debug.LogError($"{gameObject.name} has no audioSource");
         }
+        audioSource.mute = Settings.MuteSFX;
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -25,6 +26,7 @@ public class Hit : MonoBehaviour
             asrc.spatialBlend = audioSource.spatialBlend;
             asrc.priority = audioSource.priority;
             asrc.pitch = audioSource.pitch;
+            asrc.mute = audioSource.mute;
             asrc.Play();
         }
     }

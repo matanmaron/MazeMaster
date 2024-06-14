@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace MaronByteStudio.Menu
@@ -12,11 +11,6 @@ namespace MaronByteStudio.Menu
         void Start()
         {
             BackButton.onClick.AddListener(() => menu.OnBackButton());
-        }
-
-        private void OnEnable()
-        {
-            EventSystem.current.SetSelectedGameObject(BackButton.gameObject);
         }
 
         private void OnDestroy()
